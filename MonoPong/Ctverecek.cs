@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoPong
 {
-    class Ctverecek
+    abstract class Ctverecek
     {
         private Texture2D Textura { get; }
         public int Velikost { get; }

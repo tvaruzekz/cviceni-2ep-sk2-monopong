@@ -9,8 +9,6 @@ namespace MonoPong
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Ctverecek c;
-
         public Hra()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -27,13 +25,6 @@ namespace MonoPong
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            int velikost = 50;
-
-            float stredX = graphics.PreferredBackBufferWidth / 2;
-            float stredY = graphics.PreferredBackBufferHeight / 2;
-
-            c = new Ctverecek(velikost, stredX - velikost / 2, stredY - velikost / 2, Color.Black, graphics.GraphicsDevice);
         }
 
         protected override void UnloadContent()
@@ -45,18 +36,12 @@ namespace MonoPong
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            c.Aktualizovat();
-
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.White);
-
-            spriteBatch.Begin();
-            c.Vykreslit(spriteBatch);
-            spriteBatch.End();
 
             base.Draw(gameTime);
         }
