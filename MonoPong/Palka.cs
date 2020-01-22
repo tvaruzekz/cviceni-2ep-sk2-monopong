@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace MonoPong
 {
     class Palka : Obdelnicek
     {
-        public Palka()
+        public Palka(int velikostx, int velikosty, float x, float y, Color barva, GraphicsDevice zobrazovaciZarizeni) : base(velikostx, velikosty, x,  y,  barva,  zobrazovaciZarizeni)
         {
 
         }
