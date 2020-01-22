@@ -5,7 +5,7 @@ namespace MonoPong
 {
     abstract class Ctverecek
     {
-        private Texture2D Textura { get; }
+        protected Texture2D Textura { get; }
         public int Velikost { get; }
 
         public Vector2 Pozice { get; private set; }
