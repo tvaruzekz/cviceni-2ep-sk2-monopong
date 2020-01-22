@@ -5,7 +5,7 @@ namespace MonoPong
 {
     abstract class Obdelnicek
     {
-        private Texture2D Textura { get; }
+        protected Texture2D Textura { get; }
         public int VelikostX { get; }
 
         public int VelikostY { get; }

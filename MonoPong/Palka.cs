@@ -16,18 +16,19 @@ namespace MonoPong
 
         }
 
-        public void pohyb(KeyboardState stavKlavesnice, Keys smerNahoru, Keys smerDolu, int Rychlost)
+        public void pohyb(Keys smerNahoru, Keys smerDolu, int Rychlost)
         {
             Vector2 smerPohybu = Vector2.Zero;
 
-            if(stavKlavesnice.IsKeyDown(smerNahoru))
+            if(Keyboard.GetState().IsKeyDown(smerNahoru))
             {
                 smerPohybu -= Vector2.UnitY * Rychlost;
             }
-            else if(stavKlavesnice.IsKeyDown(smerDolu))
+            else if(Keyboard.GetState().IsKeyDown(smerDolu))
             {
                 smerPohybu += Vector2.UnitY * Rychlost;
             }
+
         }
     }
 }
