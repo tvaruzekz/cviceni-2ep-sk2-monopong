@@ -40,7 +40,7 @@ namespace MonoPong
             spriteBatch = new SpriteBatch(GraphicsDevice);
             palka1 = new Palka(Velikostx, Velikosty, PoziceX, PoziceY, Color.Red, graphics.GraphicsDevice);
             palka2 = new Palka(Velikostx, Velikosty, PoziceX2, PoziceY, Color.Black, graphics.GraphicsDevice);
-            micek = new Micek(Velikostx, Velikosty, PoziceX, PoziceY, Color.Khaki, graphics.GraphicsDevice);
+            micek = new Micek(Velikostx, Velikostx, PoziceX, PoziceY, Color.Khaki, graphics.GraphicsDevice);
         }
 
         protected override void UnloadContent()
@@ -61,6 +61,7 @@ namespace MonoPong
             spriteBatch.Begin();
             palka1.Vykreslit(spriteBatch);
             palka2.Vykreslit(spriteBatch);
+            micek.Vykreslit(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }
