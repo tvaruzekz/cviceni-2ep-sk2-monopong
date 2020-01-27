@@ -21,7 +21,17 @@ namespace MonoPong
         {
             Vector2 smerPohybu = Vector2.Zero;
 
-            if(Keyboard.GetState().IsKeyDown(smerNahoru))
+            if (Pozice.Y <= 0)
+            {
+                smerNahoru = 0;
+            }
+
+            if (Pozice.Y > 750 - VelikostY)
+            {
+                smerDolu = 0;
+            }
+
+            if (Keyboard.GetState().IsKeyDown(smerNahoru))
             {
                 smerPohybu -= Vector2.UnitY * Rychlost;
             }
@@ -29,7 +39,10 @@ namespace MonoPong
             {
                 smerPohybu += Vector2.UnitY * Rychlost;
             }
-            Pozice += smerPohybu;
+
+            if (smerPohybu != Vector2.Zero)
+                Pozice += Vector2.Normalize(smerPohybu) * Rychlost;
+
             Debug.WriteLine(smerPohybu);
         }
     }
