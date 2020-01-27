@@ -55,6 +55,9 @@ namespace MonoPong
             palka1.pohyb(Keys.W, Keys.S, Rychlost);
             palka2.pohyb(Keys.Up, Keys.Down, Rychlost);
 
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
+
             base.Update(gameTime);
         }
 
