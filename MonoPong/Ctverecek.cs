@@ -8,8 +8,8 @@ namespace MonoPong
         private Texture2D Textura { get; }
         public int Velikost { get; }
 
-        public Vector2 Pozice { get; private set; }
-        public Color Barva { get; private set; }
+        public Vector2 Pozice { get; protected set; }
+        public Color Barva { get; protected set; }
 
         public Ctverecek(int velikost, float x, float y, Color barva, GraphicsDevice zobrazovaciZarizeni)
         {
