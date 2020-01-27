@@ -58,6 +58,7 @@ namespace MonoPong
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            micek.Letim(5);
             base.Update(gameTime);
         }
 

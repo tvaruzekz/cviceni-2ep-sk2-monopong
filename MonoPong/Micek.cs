@@ -15,9 +15,9 @@ namespace MonoPong
 
         }
 
-        public void Pohyb()
+        public void Letim(Vector2 Rychlost)
         {
-
+            Pozice += new Vector2(5,0);
         }
     }
 }
