@@ -13,24 +13,36 @@ namespace MonoPong
     {
         Random NahodnySmerMickuKamPoleti = new Random();
         private int LetiTimtoSmerem; 
+
         public Micek(int velikostx, int velikosty, float x, float y, Color barva, GraphicsDevice zobrazovaciZarizeni) :base (velikostx, velikosty, x, y, barva, zobrazovaciZarizeni)
         {
-            LetiTimtoSmerem = NahodnySmerMickuKamPoleti.Next(0, 2);
+            LetiTimtoSmerem = NahodnySmerMickuKamPoleti.Next(0, 4);
         }
 
         public void Letim(int Rychlost)
         {
-            if (LetiTimtoSmerem == 2)
+            if (LetiTimtoSmerem == 0)
             {
-                Environment.Exit(1);
+                Pozice += new Vector2(Rychlost, Rychlost);
             }
-            if (LetiTimtoSmerem == 1)
+            else if (LetiTimtoSmerem == 1)
             {
-                Pozice += new Vector2(Rychlost, 0);
+                Pozice += new Vector2(Rychlost, -Rychlost);
             }
-            else
+            else if (LetiTimtoSmerem == 2)
             {
-                Pozice += new Vector2(-Rychlost, 0);
+                Pozice += new Vector2(-Rychlost, Rychlost);
+            }
+            else if (LetiTimtoSmerem == 3)
+            {
+                Pozice += new Vector2(-Rychlost, -Rychlost);
+            }
+
+            if (LetiTimtoSmerem == 4)
+            {
+                Debug.WriteLine("Tato akce se stala, i když neměla.");
+                Debug.WriteLine("Spusťte program znovu.");
+                Debug.WriteLine("Pokud se stato chyba stane znovu, udělejte stejnou akci.");
             }
         }
     }
