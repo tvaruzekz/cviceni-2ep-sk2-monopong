@@ -8,7 +8,7 @@ namespace MonoPong
         private Texture2D Textura { get; }
         public int Velikost { get; }
 
-        public Vector2 Pozice { get; protected set; }
+        public Vektor2 Pozice { get; protected set; }
         public Color Barva { get; protected set; }
 
         public Ctverecek(int velikost, float x, float y, Color barva, GraphicsDevice zobrazovaciZarizeni)
@@ -21,7 +21,7 @@ namespace MonoPong
 
             Textura.SetData(data);
 
-            Pozice = new Vector2 { X = x, Y = y };
+            Pozice = new Vektor2(x, y);
             Velikost = velikost;
             Barva = barva;
         }
@@ -33,7 +33,7 @@ namespace MonoPong
 
         public void Vykreslit(SpriteBatch vykreslovaciDavka)
         {
-            vykreslovaciDavka.Draw(Textura, Pozice, Barva);
+            vykreslovaciDavka.Draw(Textura, Pozice.V2, Barva);
         }
     }
 }
