@@ -9,6 +9,7 @@ namespace MonoPong
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Palka palka1, palka2;
+        Micek micek;
 
         private int Velikostx = 25;
         private int Velikosty = 150;
@@ -39,6 +40,7 @@ namespace MonoPong
             spriteBatch = new SpriteBatch(GraphicsDevice);
             palka1 = new Palka(Velikostx, Velikosty, PoziceX, PoziceY, Color.Red, graphics.GraphicsDevice);
             palka2 = new Palka(Velikostx, Velikosty, PoziceX2, PoziceY, Color.Black, graphics.GraphicsDevice);
+            micek = new Micek(Velikostx, Velikosty, PoziceX, PoziceY, Color.Khaki, graphics.GraphicsDevice);
         }
 
         protected override void UnloadContent()
