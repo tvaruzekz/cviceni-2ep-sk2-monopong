@@ -36,6 +36,9 @@ namespace MonoPong
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
+
             base.Update(gameTime);
         }
 
