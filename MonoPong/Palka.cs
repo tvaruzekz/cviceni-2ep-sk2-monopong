@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,8 @@ namespace MonoPong
             {
                 smerPohybu += Vector2.UnitY * Rychlost;
             }
-
+            Pozice += smerPohybu;
+            Debug.WriteLine(smerPohybu);
         }
     }
 }
