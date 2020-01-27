@@ -43,7 +43,6 @@ namespace MonoPong
             if (smerPohybu != Vector2.Zero)
                 Pozice += Vector2.Normalize(smerPohybu) * Rychlost;
 
-            Debug.WriteLine(smerPohybu);
         }
     }
 }
