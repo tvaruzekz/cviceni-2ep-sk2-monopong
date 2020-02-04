@@ -13,5 +13,6 @@ namespace MonoPong
             X = x;
             Y = y;
         }
+
     }
 }

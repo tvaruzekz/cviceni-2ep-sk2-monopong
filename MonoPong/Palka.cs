@@ -29,7 +29,8 @@ namespace MonoPong
             {
                 smerPohybu += Vector2.UnitY * Rychlost;
             }
-            Pozice += smerPohybu;
+            Pozice.X += smerPohybu.X;
+            Pozice.Y += smerPohybu.Y;
             Debug.WriteLine(smerPohybu);
         }
     }

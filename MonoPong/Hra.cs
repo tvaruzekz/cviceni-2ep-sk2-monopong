@@ -10,6 +10,7 @@ namespace MonoPong
         SpriteBatch spriteBatch;
         Palka palka1, palka2;
         Micek micek;
+        Vektor2 vektor2;
 
         private int Velikostx = 25;
         private int Velikosty = 150;
@@ -59,6 +60,7 @@ namespace MonoPong
                 Exit();
 
             micek.Letim(5);
+            micek.JsemMimo(palka1);
             base.Update(gameTime);
         }
 

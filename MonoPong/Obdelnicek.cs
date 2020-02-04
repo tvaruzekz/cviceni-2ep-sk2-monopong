@@ -7,16 +7,10 @@ namespace MonoPong
     {
         protected Texture2D Textura { get; }
         public int VelikostX { get; }
-
-<<<<<<< HEAD:MonoPong/Obdelnicek.cs
         public int VelikostY { get; }
 
-        public Vector2 Pozice { get; protected set; }
-        public Color Barva { get; private set; }
-=======
         public Vektor2 Pozice { get; protected set; }
-        public Color Barva { get; protected set; }
->>>>>>> master:MonoPong/Ctverecek.cs
+        public Color Barva { get; private set; }
 
         public Obdelnicek(int velikostx, int velikosty, float x, float y, Color barva, GraphicsDevice zobrazovaciZarizeni)
         {
@@ -28,14 +22,9 @@ namespace MonoPong
 
             Textura.SetData(data);
 
-<<<<<<< HEAD:MonoPong/Obdelnicek.cs
-            Pozice = new Vector2 { X = x, Y = y };
+            Pozice = new Vektor2( x, y );
             VelikostX = velikostx;
             VelikostY = velikosty;
-=======
-            Pozice = new Vektor2(x, y);
-            Velikost = velikost;
->>>>>>> master:MonoPong/Ctverecek.cs
             Barva = barva;
         }
 

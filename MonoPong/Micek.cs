@@ -26,12 +26,37 @@ namespace MonoPong
             }
             if (LetiTimtoSmerem == 1)
             {
-                Pozice += new Vector2(Rychlost, 0);
+                Pozice.X += Rychlost;
             }
             else
             {
-                Pozice += new Vector2(-Rychlost, 0);
+                Pozice.X += -Rychlost;
             }
+        }
+        public void JsemMimo(Palka palka)
+        {
+
+            if (Pozice.X > 900)
+            {
+                Pozice.X = 450;
+                Pozice.Y = 750 / 2;
+            }
+            else if (Pozice.X + VelikostX < 0)
+            {
+                Pozice.X = 450;
+                Pozice.Y = 750/2;
+            }
+            if (Pozice.Y > 750)
+            {
+                Pozice.X = 450;
+                Pozice.Y = 750 / 2;
+            }
+            else if (Pozice.Y + VelikostY < 0)
+            {
+                Pozice.X = 450;
+                Pozice.Y = 750 / 2;
+            }
+        
         }
     }
 }
