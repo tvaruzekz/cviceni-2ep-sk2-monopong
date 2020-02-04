@@ -57,8 +57,9 @@ namespace MonoPong
 
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-            micek.Letim(5);
+            if(micek.KolizeSPalkou(palka1) || micek.KolizeSPalkou(palka2))
+                micek.Odraz();
+            micek.Letim();
             base.Update(gameTime);
         }
 

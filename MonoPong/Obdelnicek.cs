@@ -36,7 +36,7 @@ namespace MonoPong
 
         public void Vykreslit(SpriteBatch vykreslovaciDavka)
         {
-            vykreslovaciDavka.Draw(Textura, Pozice, Barva);
+            vykreslovaciDavka.Draw(Textura, new Vector2(Pozice.X - Velikost.X/2, Pozice.Y - Velikost.Y / 2), Barva);
         }
     }
 }

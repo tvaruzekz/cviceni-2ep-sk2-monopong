@@ -21,12 +21,12 @@ namespace MonoPong
         {
             Vector2 smerPohybu = Vector2.Zero;
 
-            if (Pozice.Y <= 0)
+            if (Pozice.Y - Velikost.Y/2 <= 0)
             {
                 smerNahoru = 0;
             }
 
-            if (Pozice.Y > 750 - Velikost.Y)
+            if (Pozice.Y + Velikost.Y/2 >= 750)
             {
                 smerDolu = 0;
             }
@@ -44,5 +44,11 @@ namespace MonoPong
                 Pozice += Vector2.Normalize(smerPohybu) * Rychlost;
 
         }
+        public bool NarazilDoMicku(Vector2 PoziceMicku, Vector2 VelikostMicku)
+        {
+            return (Pozice.X - Velikost.X / 2 < PoziceMicku.X + Velikost.X / 2 && Pozice.X + Velikost.X / 2 > PoziceMicku.X - Velikost.X / 2);
+                        
+        }
+     
     }
 }
