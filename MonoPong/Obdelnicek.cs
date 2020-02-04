@@ -6,9 +6,10 @@ namespace MonoPong
     abstract class Obdelnicek
     {
         protected Texture2D Textura { get; }
-        public int VelikostX { get; }
+        /*public int VelikostX { get; }
 
-        public int VelikostY { get; }
+        public int VelikostY { get; }*/
+        Vector2 Velikost { get; set; }
 
         public Vector2 Pozice { get; protected set; }
         public Color Barva { get; private set; }
@@ -24,8 +25,7 @@ namespace MonoPong
             Textura.SetData(data);
 
             Pozice = new Vector2 { X = x, Y = y };
-            VelikostX = velikostx;
-            VelikostY = velikosty;
+            Velikost = new Vector2(velikostx, velikosty);
             Barva = barva;
         }
 
