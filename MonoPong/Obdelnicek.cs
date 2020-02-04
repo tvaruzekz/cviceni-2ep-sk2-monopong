@@ -9,7 +9,7 @@ namespace MonoPong
         /*public int VelikostX { get; }
 
         public int VelikostY { get; }*/
-        Vector2 Velikost { get; set; }
+        protected Vector2 Velikost { get; set; }
 
         public Vector2 Pozice { get; protected set; }
         public Color Barva { get; private set; }

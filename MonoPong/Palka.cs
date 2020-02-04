@@ -26,7 +26,7 @@ namespace MonoPong
                 smerNahoru = 0;
             }
 
-            if (Pozice.Y > 750 - VelikostY)
+            if (Pozice.Y > 750 - Velikost.Y)
             {
                 smerDolu = 0;
             }
