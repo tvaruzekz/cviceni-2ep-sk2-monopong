@@ -43,6 +43,14 @@ namespace MonoPong
                 Rychlost.Y = -Math.Abs(Rychlost.Y);
             }
         }
+        public void JsemMimo(Palka palka)
+        {
+            if (Pozice.X > 900 || Pozice.X + VelikostX < 0)
+            {
+                Pozice.X = 450;
+                Pozice.Y = 750 / 2;
+            }
+        }
 
     }
 }

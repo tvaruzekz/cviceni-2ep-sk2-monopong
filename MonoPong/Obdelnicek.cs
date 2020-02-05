@@ -11,7 +11,7 @@ namespace MonoPong
         public int VelikostY { get; }*/
         protected Vector2 Velikost { get; set; }
 
-        public Vector2 Pozice { get; protected set; }
+        public Vektor2 Pozice { get; protected set; }
         public Color Barva { get; private set; }
 
         public Obdelnicek(int velikostx, int velikosty, float x, float y, Color barva, GraphicsDevice zobrazovaciZarizeni)
