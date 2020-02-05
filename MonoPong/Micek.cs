@@ -22,11 +22,12 @@ namespace MonoPong
 
         public void Letim()
         {
-            Pozice += Rychlost;
+            Pozice.X += Rychlost.X;
+            Pozice.Y += Rychlost.Y;
         }
         public bool KolizeSPalkou(Palka palka)
         {
-            return palka.NarazilDoMicku(Pozice, Velikost);
+            return palka.NarazilDoMicku(Pozice.V2, Velikost);
         }
         public void Odraz()
         {
@@ -45,7 +46,7 @@ namespace MonoPong
         }
         public void JsemMimo(Palka palka)
         {
-            if (Pozice.X > 900 || Pozice.X + VelikostX < 0)
+            if (Pozice.X > 900 || Pozice.X + Velikost.X < 0)
             {
                 Pozice.X = 450;
                 Pozice.Y = 750 / 2;

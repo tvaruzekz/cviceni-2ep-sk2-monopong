@@ -41,7 +41,11 @@ namespace MonoPong
             }
 
             if (smerPohybu != Vector2.Zero)
-                Pozice += Vector2.Normalize(smerPohybu) * Rychlost;
+            {
+                Vector2 temp = Vector2.Normalize(smerPohybu) * Rychlost;
+                Pozice.X += temp.X;
+                Pozice.Y += temp.Y;
+            }
 
         }
         public bool NarazilDoMicku(Vector2 PoziceMicku, Vector2 VelikostMicku)

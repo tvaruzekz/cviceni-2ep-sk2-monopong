@@ -24,7 +24,8 @@ namespace MonoPong
 
             Textura.SetData(data);
 
-            Pozice = new Vector2 { X = x, Y = y };
+            Pozice = new Vektor2( x, y );
+
             Velikost = new Vector2(velikostx, velikosty);
             Barva = barva;
         }
