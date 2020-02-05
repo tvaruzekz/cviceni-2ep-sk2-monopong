@@ -32,5 +32,17 @@ namespace MonoPong
         {
                 Rychlost.X *= -1;
         }
+        public void OsetreniStran(int VyskaOkna)
+        {
+            if (Pozice.Y < 0 + Velikost.Y/2)
+            {
+                Rychlost.Y = Math.Abs(Rychlost.Y);                
+            }
+            if (Pozice.Y > VyskaOkna - Velikost.Y/2)
+            {
+                Rychlost.Y = -Math.Abs(Rychlost.Y);
+            }
+        }
+
     }
 }

@@ -60,6 +60,7 @@ namespace MonoPong
             if(micek.KolizeSPalkou(palka1) || micek.KolizeSPalkou(palka2))
                 micek.Odraz();
             micek.Letim();
+            micek.OsetreniStran(Vyska);
             base.Update(gameTime);
         }
 
