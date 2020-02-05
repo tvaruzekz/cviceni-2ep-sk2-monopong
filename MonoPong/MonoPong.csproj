@@ -41,7 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Ctverecek.cs" />
+    <Compile Include="Obdelnicek.cs" />
     <Compile Include="Hra.cs" />
     <Compile Include="Micek.cs" />
     <Compile Include="Palka.cs" />
