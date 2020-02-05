@@ -46,17 +46,6 @@ namespace MonoPong
                 Pozice.X = 450;
                 Pozice.Y = 750/2;
             }
-            if (Pozice.Y > 750)
-            {
-                Pozice.X = 450;
-                Pozice.Y = 750 / 2;
-            }
-            else if (Pozice.Y + VelikostY < 0)
-            {
-                Pozice.X = 450;
-                Pozice.Y = 750 / 2;
-            }
-        
         }
     }
 }
