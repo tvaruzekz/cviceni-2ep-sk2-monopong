@@ -46,7 +46,7 @@ namespace MonoPong
         }
         public bool NarazilDoMicku(Vector2 PoziceMicku, Vector2 VelikostMicku)
         {
-            return (Pozice.X - Velikost.X / 2 < PoziceMicku.X + Velikost.X / 2 && Pozice.X + Velikost.X / 2 > PoziceMicku.X - Velikost.X / 2);
+            return (Pozice.X - Velikost.X / 2 < PoziceMicku.X + Velikost.X / 2 && Pozice.X + Velikost.X / 2 > PoziceMicku.X - Velikost.X / 2 && Pozice.Y - Velikost.Y / 2 < PoziceMicku.Y + Velikost.Y / 2 && Pozice.Y + Velikost.Y / 2 > PoziceMicku.Y - Velikost.Y / 2);
                         
         }
      
