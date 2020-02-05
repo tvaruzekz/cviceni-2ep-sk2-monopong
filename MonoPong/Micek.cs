@@ -35,16 +35,10 @@ namespace MonoPong
         }
         public void JsemMimo(Palka palka)
         {
-
-            if (Pozice.X > 900)
+            if (Pozice.X > 900 || Pozice.X + VelikostX < 0)
             {
                 Pozice.X = 450;
                 Pozice.Y = 750 / 2;
-            }
-            else if (Pozice.X + VelikostX < 0)
-            {
-                Pozice.X = 450;
-                Pozice.Y = 750/2;
             }
         }
     }
