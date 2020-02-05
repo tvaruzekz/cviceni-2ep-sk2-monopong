@@ -17,7 +17,7 @@ namespace MonoPong
         public Micek(int velikostx, int velikosty, float x, float y, Color barva, GraphicsDevice zobrazovaciZarizeni) :base (velikostx, velikosty, x, y, barva, zobrazovaciZarizeni)
         {
             LetiTimtoSmerem = NahodnySmerMickuKamPoleti.Next(0, 4);
-            Rychlost = new Vector2(-3, -1);
+            Rychlost = new Vector2(5, 5);
         }
 
         public void Letim()
