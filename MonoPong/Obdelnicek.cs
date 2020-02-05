@@ -6,11 +6,12 @@ namespace MonoPong
     abstract class Obdelnicek
     {
         protected Texture2D Textura { get; }
-        public int VelikostX { get; }
+        /*public int VelikostX { get; }
 
-        public int VelikostY { get; }
+        public int VelikostY { get; }*/
+        protected Vector2 Velikost { get; set; }
 
-        public Vector2 Pozice { get; protected set; }
+        public Vektor2 Pozice { get; protected set; }
         public Color Barva { get; private set; }
 
         public Obdelnicek(int velikostx, int velikosty, float x, float y, Color barva, GraphicsDevice zobrazovaciZarizeni)
@@ -23,9 +24,9 @@ namespace MonoPong
 
             Textura.SetData(data);
 
-            Pozice = new Vector2 { X = x, Y = y };
-            VelikostX = velikostx;
-            VelikostY = velikosty;
+            Pozice = new Vektor2( x, y );
+
+            Velikost = new Vector2(velikostx, velikosty);
             Barva = barva;
         }
 
@@ -36,7 +37,7 @@ namespace MonoPong
 
         public void Vykreslit(SpriteBatch vykreslovaciDavka)
         {
-            vykreslovaciDavka.Draw(Textura, Pozice, Barva);
+            vykreslovaciDavka.Draw(Textura, new Vector2(Pozice.X - Velikost.X/2, Pozice.Y - Velikost.Y / 2), Barva);
         }
     }
 }
